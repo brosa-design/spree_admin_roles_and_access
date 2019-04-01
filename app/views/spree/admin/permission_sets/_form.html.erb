@@ -1,5 +1,7 @@
 <div class="alert alert-info"><%= Spree.t(:permission_set_admin_permission_required) %></div>
 
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: f.object } %>
+
 <div data-hook="admin_permission_set_form_fields">
   <div class="inline-input-row col-xs-12">
     <%= f.field_container :name, class: ['form-group input-group input-group-md'] do %>

@@ -19,9 +19,10 @@ en:
     permission_set_description: Description
     permission_set_display_permission: Display Permission
     permission_set_permissions: Permissions
+    permission_sets: Permission Sets
     permission_title: Title
     permission_priority: Priority
-    permission_priority_help: Set the order of permission in list, with 0 being the highest priority
+    permission_priority_help: Set the order of permission in list, with 0 being the lowest priority
     permission_visible: Visible
     permission_visible_help: Mark permission as publically visible to other users managing permissions
     select_permissions: Select Permissions

@@ -43,7 +43,7 @@ var SearchableList = (function() {
       var value = $(this).find('input').val();
       var pattern = new RegExp(value, "i");
 
-      that.$container.find('.list-group-item').each(function() {
+      that.$container.find('.search-target').each(function() {
         if (!($(this).text().search(pattern) >= 0)) {
           $(this).hide();
         } else {

@@ -18,6 +18,12 @@
   <%= hidden_field_tag 'role[permission_set_ids][]', [] %>
   <div data-hook="admin_role_form_permission_sets" class="form-group">
     <%- @role.permission_sets.to_a %>
+    <span class="help-block">
+      <b>NOTE:</b>
+      <%= Spree.t(:atleast_one_permission_set_is_required) %> *
+      <br>
+      Make sure you add the "default" permission set, otherwise user won't be able to place the Order from frontend.
+    </span>
     <div class="searchable-scrollable-list">
       <% @permission_sets.group_by { |permission_set| permission_set.display_permission? ? 'Display Permission' : 'Management Permission' }.each do |title, permission_sets| %>
         <%= render 'spree/admin/shared/checkbox_list_pane', { items: permission_sets, title: title, is_checked: lambda { |x| @role.permission_sets.include? x}, field: 'role[permission_set_ids][]' } %>
